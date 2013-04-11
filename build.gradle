@@ -61,3 +61,6 @@ task deployB2( dependsOn: "war" ) << {
       ant.b2deploy( localfilepath: project.war.archivePath, host: project.b2DeployTarget, courseorgavailable: 'true', clean: 'true' )
 }
 
+task wrapper(type: Wrapper) {
+  gradleVersion = '1.5'
+}
