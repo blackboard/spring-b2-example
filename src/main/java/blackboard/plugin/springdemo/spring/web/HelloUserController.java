@@ -13,7 +13,9 @@ public class HelloUserController
 {
 
   @RequestMapping( "/hello" )
+  // Defines the entitlement that all users must have to access this controller.
   @UserAuthorization( "system.plugin.MODIFY" )
+  // @ContextValue will automatically pull the User object out of the request context for you.
   public ModelAndView hello( @ContextValue User user )
   {
     // ModelAndView objects encapsulate the data for a view and which view to show in one

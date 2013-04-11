@@ -30,6 +30,9 @@ public class HelloCourseController
   private UserDbLoader _userLoader;
 
   @RequestMapping( "/course_users" )
+  // @IdParam will take the string in the request parameter listed and use it as an Id object
+  // to look up the object based on the type.   In this case, it will convert the string to 
+  // an Id and look up the Course based on the Id.
   public ModelAndView listCourseUsers( @IdParam( "cid" ) Course course )
     throws KeyNotFoundException, PersistenceException
   {
