@@ -11,6 +11,4 @@ gradlew build
 ### Deploying
 To deploy the B2 to your Learn server, run:
 
-gradlew -Dserver=\<server host and port\> deployB2
-
-where <server host and port> for a locally running server would be "localhost:80".
+gradlew -Dserver=host:port deployB2
