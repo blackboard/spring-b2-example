@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.blackboard.com/bb-schema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.blackboard.com/bb-schema http://fibbba.medu.com/xsd/bb-schema.xsd"
+        name="SpringDemo" license="Course Delivery">
+  <comment>This schema contains tables related to the Spring Demo.</comment>
+
+  <table name="bb_springdemo_foo">
+    <column name="foo_id" data-type="int" nullable="false" identity="true" sequence="bb_springdemo_foo_seq" comment="This is the surrogate primary key for the table." />
+    <column name="name" data-type="nvarchar(256)" nullable="false" />
+    <column name="value" data-type="nvarchar(256)" nullable="false" />
+    <primary-key name="bb_springdemo_foo_pk" comment="This is the name of primary key constraint on column foo_id.">
+      <columnref name="foo_id" />
+    </primary-key>
+  </table>
+  
+</schema>
